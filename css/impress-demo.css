@@ -222,15 +222,11 @@ a:focus {
 }
 
 /*두번째 bullet level*/
-.slide .content > ol ol > li {
-    font-size: 14px;
-    padding-top: 10px;
-    padding-left: 30px;
-}
-
-/*두번째 bullet level*/
-.slide .content > ol  ul > li {
-    font-size: 14px;
+.slide .content > ol ol > li,
+.slide .content > ol  ul > li,
+.slide .content > div  ul  ul li
+ {
+    font-size: 20px;
     padding-top: 10px;
     padding-left: 30px;
 }
@@ -420,7 +416,8 @@ a:focus {
     transform:         translateY(-10px);
 }
 
-#title div {
+#title1 div,
+#bookshelf > div {
     display: inline-block;
     -webkit-transition: 5s;
     -moz-transition:    5s;
@@ -429,7 +426,7 @@ a:focus {
     transition:         5s;
 }
 
-#title.present .positioning {
+#title1.present .positioning {
     -webkit-transform: scale(1.4);
     -moz-transform:    scale(1.4);
     -ms-transform:     scale(1.4);
@@ -437,6 +434,13 @@ a:focus {
     transform:         scale(1.4);
 }
 
+#bookshelf.present .animating {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform:    rotateY(180deg);
+    -ms-transform:     rotateY(180deg);
+    -o-transform:      rotateY(180deg);
+    transform:         rotateY(180deg);
+}
 
 .impress-enabled          { pointer-events: none }
 .impress-enabled #impress { pointer-events: auto }
