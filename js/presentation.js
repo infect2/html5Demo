@@ -81,6 +81,14 @@ pageAnimationHandler.init({
                 $(that).attr( "src", $( that ).attr( 'data-src') );
             }, 1000);
         });
+    },
+    webRTC: function(){
+        $('#webRTC iframe').each( function( index, elem ){
+            var that = this;
+            setTimeout( function(){
+                $(that).attr( "src", $( that ).attr( 'data-src') );
+            }, 1000);
+        });
     }
 });
 
