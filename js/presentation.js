@@ -40,7 +40,7 @@ pageAnimationHandler.init({
             var that = this;
             setTimeout( function(){
                 $(that).attr( "src", $( that ).attr( 'data-src') );
-            }, 2000);
+            }, 1000);
         });
     },
     bookshelf: function(){
@@ -48,16 +48,38 @@ pageAnimationHandler.init({
             var that = this;
             setTimeout( function(){
                 $(that).attr( "src", $( that ).attr( 'data-src') );
-            }, 2000);
+            }, 1000);
         });
         $('#bookshelf .title').off().on('click',function(){
             $('#bookshelf div' ).toggleClass("animating");
-            $('#bookshelf .title').html("CSS3D: rotate y축")
+            $('#bookshelf .title').html("CSS3D: rotate y축");
         });
     },
-    linkedinIssue: function(){
-        $('#linkedinIssue img').off().on('click', function(){
-            alert("제대로 된 Tool이 없어요!");
+    youtube: function(){
+        $('#youtube iframe').each( function( index, elem ){
+            var that = this;
+            setTimeout( function(){
+                $(that).attr( "src", $( that ).attr( 'data-src') );
+            }, 1000);
+        });
+        $('#youtube .title').off().on('click',function(){
+            $('#youtube div' ).toggleClass("animating");
+        });
+    },
+    canvasRider: function(){
+        $('#canvasRider iframe').each( function( index, elem ){
+            var that = this;
+            setTimeout( function(){
+                $(that).attr( "src", $( that ).attr( 'data-src') );
+            }, 1000);
+        });
+    },
+    webAudio: function(){
+        $('#webAudio iframe').each( function( index, elem ){
+            var that = this;
+            setTimeout( function(){
+                $(that).attr( "src", $( that ).attr( 'data-src') );
+            }, 1000);
         });
     }
 });

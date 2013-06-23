@@ -417,7 +417,8 @@ a:focus {
 }
 
 #title1 div,
-#bookshelf > div {
+#bookshelf > div,
+#youtube > div {
     display: inline-block;
     -webkit-transition: 5s;
     -moz-transition:    5s;
@@ -440,6 +441,20 @@ a:focus {
     -ms-transform:     rotateY(180deg);
     -o-transform:      rotateY(180deg);
     transform:         rotateY(180deg);
+}
+
+#youtube.present .animating {
+    -webkit-animation:animated_div 10s 3;
+}
+
+@-webkit-keyframes animated_div
+{
+0%      {-webkit-transform: rotate(0deg);left:0px;}
+25%     {-webkit-transform: rotate(20deg);left:0px;}
+50%     {-webkit-transform: rotate(0deg);left:500px;}
+55%     {-webkit-transform: rotate(0deg);left:500px;}
+70%     {-webkit-transform: rotate(0deg);left:500px;}
+100%    {-webkit-transform: rotate(-360deg);left:0px;}
 }
 
 .impress-enabled          { pointer-events: none }
